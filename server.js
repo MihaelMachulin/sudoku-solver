@@ -32,7 +32,7 @@ app.post('/solve', (req, res) => {
 })
 
 app.get('*', (req, res) => {
-  res.sendFile('index.html')
+  res.sendFile('https://sudoku-solver-2022.herokuapp.com/index.html')
 })
 
 app.listen(PORT, () => console.log(`server listening on PORT ${PORT}`))
