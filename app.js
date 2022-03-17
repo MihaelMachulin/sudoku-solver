@@ -56,7 +56,7 @@ const solve = () => {
   const data = {numbers: submission.join('')}
   console.log('data', data)
 
-  fetch('http://localhost:8000/solve', {
+  fetch('https://sudoku-solver-2022.herokuapp.com/solve', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
