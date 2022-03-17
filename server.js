@@ -31,4 +31,8 @@ app.post('/solve', (req, res) => {
       })
 })
 
+app.get('*', (req, res) => {
+  res.sendFile('index.html')
+})
+
 app.listen(PORT, () => console.log(`server listening on PORT ${PORT}`))
