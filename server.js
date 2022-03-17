@@ -1,6 +1,6 @@
 // Это бэкэнд, детка!
 // npm i axios express cors dotenv
-const PORT = process.env.PORT || 80
+const PORT = 443
 const axios = require('axios').default
 const express = require('express')
 const cors = require('cors')
