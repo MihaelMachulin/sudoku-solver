@@ -4,14 +4,14 @@ const PORT = process.env.PORT || 800
 const axios = require('axios').default
 const express = require('express')
 const cors = require('cors')
-// const path = require('path')
+const path = require('path')
 require('dotenv').config()
-
 
 const app = express()
 
 app.use(cors())
 app.use(express.json())
+app.use(express.static(path.resolve(__dirname)))
 
 app.post('/solve', (req, res) => {
     const options = {
@@ -33,10 +33,6 @@ app.post('/solve', (req, res) => {
       }).catch((error) => {
         console.error('Error:', error)
       })
-})
-
-app.get('/', (req, res) => {
-  res.sendFile('https://sudoku-solver-2022.herokuapp.com/index.html')
 })
 
 app.listen(PORT, () => console.log(`server listening on PORT ${PORT}`))
