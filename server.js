@@ -1,13 +1,21 @@
 // Это бэкэнд, детка!
 // npm i axios express cors dotenv
-const PORT = process.env.PORT || 80
+const PORT = process.env.PORT || 800
 const axios = require('axios').default
 const express = require('express')
 const cors = require('cors')
+// const path = require('path')
 require('dotenv').config()
+
+
 const app = express()
+
 app.use(cors())
 app.use(express.json())
+
+app.post('/solve', (req, res) => {
+
+})
 
 app.post('/solve', (req, res) => {
     const options = {
@@ -31,7 +39,7 @@ app.post('/solve', (req, res) => {
       })
 })
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile('https://sudoku-solver-2022.herokuapp.com/index.html')
 })
 
