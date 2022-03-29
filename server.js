@@ -14,10 +14,6 @@ app.use(cors())
 app.use(express.json())
 
 app.post('/solve', (req, res) => {
-
-})
-
-app.post('/solve', (req, res) => {
     const options = {
         method: 'POST',
         url: 'https://sudoku-solver2.p.rapidapi.com/',
